@@ -5,129 +5,122 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>SweetCrumbs - Store</title>
+    <title>Lily & Sugar - Store</title>
 
     <link rel="stylesheet" href="store.css">
+
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
+    <header class="main-header">
 
-    <nav class="navbar">
-
-        <div class="logo">
-            Sweet<span>Crumbs</span>
+        <div class="header-left">
+            <i class="fa-solid fa-magnifying-glass"></i>
         </div>
 
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="store.html" class="active">Store</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+        <a href="landing.html" class="logo">
+            <img src="./images/logo.png" alt="Lily & Sugar">
+        </a>
 
-        <div class="cart">
-            🛒 Cart <span id="cart-count">0</span>
+        <div class="header-right">
+
+            <a href="#">
+                <i class="fa-regular fa-heart"></i>
+            </a>
+
+            <a href="#">
+                <i class="fa-solid fa-bag-shopping"></i>
+            </a>
+
+            <a href="login.html">
+                <i class="fa-regular fa-user"></i>
+            </a>
+
         </div>
+
+    </header>
+
+
+    <nav class="navigation">
+
+        <a href="landing.html">MENU</a>
+        <a href="#">CUSTOM CAKE</a>
+        <a href="store.html">STORE</a>
+        <a href="#">ABOUT US</a>
+        <a href="#">FAVOURITES</a>
+        <a href="#">CART</a>
 
     </nav>
 
-    <section class="store-hero">
 
-        <div class="hero-content">
+    <section class="store-banner">
 
-            <h1>Our Store</h1>
+        <h1>Our Store</h1>
 
-            <p>
-                Freshly baked treats, crafted with love.
-            </p>
+        <p>
+            Freshly baked treats, made with love.
+        </p>
 
-            <a href="#products" class="hero-btn">
-                Explore Products
-            </a>
-
-        </div>
-
-    </section>
-
-    <section class="categories">
-
-        <h2>Explore Our Menu</h2>
-
-        <div class="category-buttons">
-
-            <button class="active">All</button>
-            <button>Cakes</button>
-            <button>Pastries</button>
-            <button>Breads</button>
-            <button>Cookies</button>
-            <button>Donuts</button>
-            <button>Beverages</button>
-
-        </div>
+        <a href="#products">
+            EXPLORE PRODUCTS
+        </a>
 
     </section>
 
 
-    <section class="products-section" id="products">
+    <section class="store-section">
 
-        <div class="section-title">
+        <p class="section-label">
+            EXPLORE OUR MENU
+        </p>
 
-            <h2>Our Best Sellers</h2>
+        <div class="categories">
 
-            <p>
-                Delicious favorites loved by our customers
-            </p>
+            <button>ALL</button>
+            <button>CAKES</button>
+            <button>PASTRIES</button>
+            <button>COOKIES</button>
+            <button>CUPCAKES</button>
+            <button>BREADS</button>
 
         </div>
 
 
-        <div class="product-grid">
+        <p class="section-label">
+            OUR FAVORITES
+        </p>
+
+        <h2 id="products">
+            Freshly Baked For You
+        </h2>
+
+        <div class="products">
 
 
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/chocolate-cake.jpg"
-                         alt="Chocolate Truffle Cake">
-
-                    <span class="badge">
-                        Bestseller
-                    </span>
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/cheesecake.jpeg" alt="Cheesecake">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★★
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Chocolate Truffle Cake
-                    </h3>
+                    <h3>Cheesecake</h3>
 
                     <p>
-                        Rich chocolate cake with creamy chocolate ganache.
+                        Creamy and smooth cheesecake made fresh.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹599
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹499</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -135,46 +128,27 @@
             </div>
 
 
-            <!-- PRODUCT 2 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/croissant.jpg"
-                         alt="Butter Croissant">
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/tiramisu.jpeg" alt="Tiramisu">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★☆
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Butter Croissant
-                    </h3>
+                    <h3>Tiramisu</h3>
 
                     <p>
-                        Crispy, buttery and freshly baked every morning.
+                        A delicious Italian dessert with rich flavors.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹149
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹399</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -182,50 +156,28 @@
             </div>
 
 
-            <!-- PRODUCT 3 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/cookies.jpg"
-                         alt="Chocolate Cookies">
-
-                    <span class="badge">
-                        Popular
-                    </span>
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/butterscotch-cake.jpeg"
+                        alt="Butterscotch Cake">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★★
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Chocolate Cookies
-                    </h3>
+                    <h3>Butterscotch Cake</h3>
 
                     <p>
-                        Soft baked cookies loaded with chocolate chips.
+                        Soft cake with delicious butterscotch cream.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹199
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹599</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -233,46 +185,28 @@
             </div>
 
 
-            <!-- PRODUCT 4 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/donut.jpg"
-                         alt="Glazed Donut">
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/cookies.jpeg"
+                        alt="Chocolate Cookies">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★☆
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Glazed Donut
-                    </h3>
+                    <h3>Chocolate Cookies</h3>
 
                     <p>
-                        Soft and fluffy donut covered with sweet glaze.
+                        Freshly baked cookies with chocolate chips.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹99
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹199</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -280,50 +214,28 @@
             </div>
 
 
-            <!-- PRODUCT 5 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/red-velvet.jpg"
-                         alt="Red Velvet Cake">
-
-                    <span class="badge">
-                        New
-                    </span>
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/redvelvet.jpeg"
+                        alt="Red Velvet Cake">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★★
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Red Velvet Cake
-                    </h3>
+                    <h3>Red Velvet Cake</h3>
 
                     <p>
-                        Classic red velvet sponge with creamy frosting.
+                        Soft red velvet cake with creamy frosting.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹699
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹699</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -331,46 +243,28 @@
             </div>
 
 
-            <!-- PRODUCT 6 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/bread.jpg"
-                         alt="Fresh Milk Bread">
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/cupcake.jpeg"
+                        alt="Vanilla Cupcake">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★☆
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Fresh Milk Bread
-                    </h3>
+                    <h3>Vanilla Cupcake</h3>
 
                     <p>
-                        Soft homemade bread made with fresh ingredients.
+                        Soft vanilla cupcake with creamy frosting.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹120
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹149</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -378,46 +272,28 @@
             </div>
 
 
-            <!-- PRODUCT 7 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/muffin.jpg"
-                         alt="Blueberry Muffin">
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/muffin.jpeg"
+                        alt="Blueberry Muffin">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★★
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Blueberry Muffin
-                    </h3>
+                    <h3>Blueberry Muffin</h3>
 
                     <p>
-                        Soft vanilla muffin filled with fresh blueberries.
+                        Soft muffin filled with fresh blueberries.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹129
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹179</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -425,50 +301,28 @@
             </div>
 
 
-            <!-- PRODUCT 8 -->
-
             <div class="product-card">
 
                 <div class="product-image">
-
-                    <img src="images/cupcake.jpg"
-                         alt="Vanilla Cupcake">
-
-                    <span class="badge">
-                        Special
-                    </span>
-
-                    <button class="wishlist">
-                        ♡
-                    </button>
-
+                    <img src="./images/bread.jpeg"
+                        alt="Fresh Milk Bread">
                 </div>
 
                 <div class="product-info">
 
-                    <div class="rating">
-                        ★★★★★
-                    </div>
+                    <button class="heart">
+                        ♡
+                    </button>
 
-                    <h3>
-                        Vanilla Cupcake
-                    </h3>
+                    <h3>Fresh Milk Bread</h3>
 
                     <p>
-                        Light vanilla cupcake topped with creamy frosting.
+                        Soft and fresh bread made with quality ingredients.
                     </p>
 
                     <div class="product-bottom">
-
-                        <span class="price">
-                            ₹89
-                        </span>
-
-                        <button class="add-btn"
-                                onclick="addToCart()">
-                            Add to Cart
-                        </button>
-
+                        <span>₹120</span>
+                        <button>Add to Cart</button>
                     </div>
 
                 </div>
@@ -479,48 +333,93 @@
 
     </section>
 
-
-    <!-- SPECIAL OFFER -->
 
     <section class="offer">
 
-        <div class="offer-content">
+        <h2>Sweet Weekend Deal</h2>
 
-            <h2>
-                Sweet Weekend Deal
-            </h2>
+        <p>
+            Get 20% OFF on selected treats this weekend!
+        </p>
 
-            <p>
-                Get 20% OFF on selected cakes this weekend!
-            </p>
-
-            <a href="#products" class="offer-btn">
-                Order Now
-            </a>
-
-        </div>
+        <a href="#">
+            ORDER NOW
+        </a>
 
     </section>
 
 
-    <!-- FOOTER -->
+    <footer class="footer">
 
-    <footer>
+        <div class="footer-container">
 
-        <h2>SweetCrumbs Bakery</h2>
+            <div class="footer-brand">
 
-        <p>
-            Freshly baked happiness, every single day.
-        </p>
+                <h3>Lily & Sugar</h3>
 
-        <p>
-            © 2026 SweetCrumbs. All Rights Reserved.
-        </p>
+                <p>Freshly baked with love.</p>
+
+                <p>Sweet moments made special.</p>
+
+            </div>
+
+
+            <div class="footer-links">
+
+                <h4>QUICK LINKS</h4>
+
+                <a href="login.html">Login</a>
+                <a href="landing.html">Menu</a>
+                <a href="#">Custom Cake</a>
+                <a href="store.html">Store</a>
+
+            </div>
+
+
+            <div class="footer-address">
+
+                <h4>VISIT US</h4>
+
+                <p>
+                    <i class="fa-solid fa-location-dot"></i>
+                    Lily & Sugar Bakery
+                </p>
+
+                <p>Jaipur, Rajasthan</p>
+
+                <p>India</p>
+
+            </div>
+
+
+            <div class="footer-contact">
+
+                <h4>GET IN TOUCH</h4>
+
+                <p>
+                    <i class="fa-solid fa-phone"></i>
+                    +91 XXXXX XXXXX
+                </p>
+
+                <p>
+                    <i class="fa-solid fa-envelope"></i>
+                    hello@lilyandsugar.com
+                </p>
+
+            </div>
+
+        </div>
+
+
+        <div class="footer-bottom">
+
+            <p>
+                © 2026 Lily & Sugar. All Rights Reserved.
+            </p>
+
+        </div>
 
     </footer>
-
-
-    <script src="script.js"></script>
 
 </body>
 
