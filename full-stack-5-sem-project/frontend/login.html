@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>Login - Lily & Sugar</title>
 
     <link rel="stylesheet" href="login.css">
@@ -10,60 +12,67 @@
 
 <body>
 
-    <!-- Header -->
     <header>
-        <a href="store.html" class="back">← Back to Shop</a>
 
-        <div class="logo">
-            <h1>Lily & Sugar</h1>
-            <p>Freshly baked happiness ♡</p>
-        </div>
+        <a href="store.html" class="back">
+            ← Back to Shop
+        </a>
+
+        <a href="landing.html" class="logo">
+            <img src="./images/logo.png" alt="Lily & Sugar">
+        </a>
+
     </header>
 
 
-    <!-- Main Login Section -->
     <main>
 
-        <!-- Left Side -->
         <div class="image-section">
 
-            <img src="images/bakery.jpg" alt="Bakery">
+            <div class="image-text">
+                <p>WELCOME TO</p>
 
-            <h2>Sweet moments<br>start here. ♡</h2>
+                <h2>
+                    Sweet moments<br>
+                    start here. ♡
+                </h2>
+            </div>
 
         </div>
 
 
-        <!-- Right Side -->
         <div class="login-section">
 
-            <h2>Welcome Back ♡</h2>
+            <p class="section-label">
+                WELCOME BACK
+            </p>
+
+            <h1>
+                Login to Lily & Sugar
+            </h1>
 
             <p class="subtitle">
                 Sign in to continue your sweet journey.
             </p>
 
 
-            <!-- Login Form -->
             <form id="loginForm">
 
-                <!-- Email -->
                 <label>Email Address</label>
 
-                <input 
-                    type="email" 
+                <input
+                    type="email"
                     id="email"
                     placeholder="Enter your email"
                     required
                 >
 
 
-                <!-- Password -->
                 <label>Password</label>
 
                 <div class="password-box">
 
-                    <input 
+                    <input
                         type="password"
                         id="password"
                         placeholder="Enter your password"
@@ -77,13 +86,11 @@
                 </div>
 
 
-                <!-- Forgot Password -->
                 <a href="forgot-password.html" class="forgot">
                     Forgot password?
                 </a>
 
 
-                <!-- Login Button -->
                 <button type="submit" class="login-btn">
                     LOGIN
                 </button>
@@ -91,7 +98,6 @@
             </form>
 
 
-            <!-- Register -->
             <p class="register">
                 Don't have an account?
                 <a href="register.html">Create an account</a>
@@ -105,4 +111,5 @@
     <script src="login.js"></script>
 
 </body>
+
 </html>
