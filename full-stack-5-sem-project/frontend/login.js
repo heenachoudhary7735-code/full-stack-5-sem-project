@@ -5,7 +5,7 @@ const password = document.getElementById("password");
 const showPassword = document.getElementById("showPassword");
 
 
-// Show / hide password
+
 
 showPassword.addEventListener("click", function () {
 
@@ -22,7 +22,7 @@ showPassword.addEventListener("click", function () {
 });
 
 
-// Login form
+
 
 const loginForm = document.getElementById("loginForm");
 

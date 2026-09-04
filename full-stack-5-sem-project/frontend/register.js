@@ -6,7 +6,7 @@ registerForm.addEventListener("submit", function(event) {
     event.preventDefault();
 
 
-    // Get values
+    
 
     const name = document.getElementById("name").value;
 
@@ -22,7 +22,7 @@ registerForm.addEventListener("submit", function(event) {
 
 
 
-    // Check password
+    
 
     if (password !== confirmPassword) {
 
@@ -33,7 +33,7 @@ registerForm.addEventListener("submit", function(event) {
 
 
 
-    // Check terms
+    
 
     if (!terms) {
 
@@ -44,7 +44,7 @@ registerForm.addEventListener("submit", function(event) {
 
 
 
-    // Registration successful
+    
 
     alert("Account created successfully!");
 

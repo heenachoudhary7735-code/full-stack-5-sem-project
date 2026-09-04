@@ -7,7 +7,7 @@ const minusButton = document.getElementById("minus");
 const plusButton = document.getElementById("plus");
 
 
-// PLUS
+
 
 plusButton.addEventListener("click", function () {
 
@@ -20,7 +20,7 @@ plusButton.addEventListener("click", function () {
 });
 
 
-// MINUS
+
 
 minusButton.addEventListener("click", function () {
 
@@ -76,13 +76,13 @@ function calculateTotal() {
 }
 
 
-// SIZE
+
 
 document.getElementById("size")
     .addEventListener("change", calculateTotal);
 
 
-// DELIVERY
+
 
 document.querySelectorAll(
     'input[name="delivery"]'
@@ -96,7 +96,7 @@ document.querySelectorAll(
 });
 
 
-// TOPPER
+
 
 const toppers =
     document.querySelectorAll(".topper");
@@ -119,7 +119,7 @@ toppers.forEach(function (topper) {
 });
 
 
-// MESSAGE
+
 
 document.getElementById("messageCheck")
     .addEventListener("change", function () {
@@ -132,7 +132,7 @@ document.getElementById("messageCheck")
     });
 
 
-// ADD TO CART
+
 
 document.getElementById("addButton")
     .addEventListener("click", function () {
