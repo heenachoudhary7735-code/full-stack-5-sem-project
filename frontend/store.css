@@ -15,7 +15,6 @@ a {
 }
 
 
-/* Header */
 
 .main-header {
     height: 120px;
@@ -61,7 +60,6 @@ a {
 }
 
 
-/* Navigation */
 
 .navigation {
     height: 60px;
@@ -121,7 +119,6 @@ a {
 }
 
 
-/* Store Section */
 
 .store-section {
     padding: 80px 50px;
@@ -171,7 +168,6 @@ a {
 }
 
 
-/* Products */
 
 .products {
     max-width: 1150px;
@@ -261,7 +257,6 @@ a {
 }
 
 
-/* Offer */
 
 .offer {
     margin: 20px 50px 80px;
@@ -298,7 +293,6 @@ a {
 }
 
 
-/* Footer */
 
 .footer {
     background-color: #4a2415;
@@ -374,7 +368,6 @@ a {
 }
 
 
-/* Mobile */
 
 @media (max-width: 800px) {
 
