@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
 import "./Landing.css";
 
@@ -220,7 +221,7 @@ function Landing() {
             <h4>Quick Links</h4>
 
             <a href="/">Home</a>
-            <a href="/store.html">Store</a>
+            <Link to="/store">STORE</Link>
             <a href="/custom.html">Custom Cake</a>
             <a href="/about.html">About Us</a>
           </div>
