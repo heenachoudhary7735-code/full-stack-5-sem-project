@@ -82,7 +82,7 @@ function Landing() {
       <nav className="navigation">
         <a href="#popular">MENU</a>
         <a href="/custom.html">CUSTOM CAKE</a>
-        <a href="/store.html">STORE</a>
+         <Link to="/store">STORE</Link>
         <a href="/about.html">ABOUT US</a>
 
         <a
