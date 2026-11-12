@@ -1,6 +1,5 @@
-
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import React, { useState } from "react";
 import "./Store.css";
 
 function Store() {
@@ -9,72 +8,68 @@ function Store() {
     const [selectedCategory, setSelectedCategory] = useState("ALL");
     const [favorites, setFavorites] = useState([]);
 
-    const products = [
-        {
-            id: 1,
-            name: "Cheesecake",
-            description: "Creamy and smooth cheesecake made fresh.",
-            price: 499,
-            image: "/images/cheesecake.jpeg",
-            category: "CAKES"
-        },
-        {
-            id: 2,
-            name: "Tiramisu",
-            description: "A delicious Italian dessert with rich flavors.",
-            price: 399,
-            image: "/images/tiramisu.jpeg",
-            category: "PASTRIES"
-        },
-        {
-            id: 3,
-            name: "Butterscotch Cake",
-            description: "Soft cake with delicious butterscotch cream.",
-            price: 599,
-            image: "/images/butterscotch-cake.jpeg",
-            category: "CAKES"
-        },
-        {
-            id: 4,
-            name: "Chocolate Cookies",
-            description: "Freshly baked cookies with chocolate chips.",
-            price: 199,
-            image: "/images/cookie.jpeg",
-            category: "COOKIES"
-        },
-        {
-            id: 5,
-            name: "Red Velvet Cake",
-            description: "Soft red velvet cake with creamy frosting.",
-            price: 699,
-            image: "/images/redvelvet.jpeg",
-            category: "CAKES"
-        },
-        {
-            id: 6,
-            name: "Vanilla Cupcake",
-            description: "Soft vanilla cupcake with creamy frosting.",
-            price: 149,
-            image: "/images/cupcake.jpeg",
-            category: "CUPCAKES"
-        },
-        {
-            id: 7,
-            name: "Blueberry Muffin",
-            description: "Soft muffin filled with fresh blueberries.",
-            price: 179,
-            image: "/images/blueberry.jpeg",
-            category: "PASTRIES"
-        },
-        {
-            id: 8,
-            name: "Fresh Milk Bread",
-            description: "Soft and fresh bread made with quality ingredients.",
-            price: 120,
-            image: "/images/bread.jpeg",
-            category: "BREADS"
-        }
-    ];
+        const [products, setProducts] = useState([]);
+
+    const [loading, setLoading] = useState(true);
+
+    const [error, setError] = useState("");
+
+
+    // Fetch products from Express backend
+    useEffect(() => {
+
+        const fetchProducts = async () => {
+
+            try {
+
+                const response = await fetch(
+                    "http://127.0.0.1:5000/api/products"
+                );
+
+                if (!response.ok) {
+
+                    throw new Error("Failed to fetch products");
+
+                }
+
+                const data = await response.json();
+
+                if (!Array.isArray(data)) {
+
+                    throw new Error("Invalid product data received");
+
+                }
+
+                setProducts(data);
+
+                setError("");
+
+            }
+
+            catch (error) {
+
+                console.error("Error fetching products:", error);
+
+                setError(
+                    "Unable to load products. Please check your backend server."
+                );
+
+            }
+
+            finally {
+
+                setLoading(false);
+
+            }
+
+        };
+
+        fetchProducts();
+
+    }, []);
+
+
+    
 
     // Add product to cart
     const addToCart = () => {
