@@ -1,15 +1,25 @@
-import React, { useState, useEffect } from "react";
+
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import "./Store.css";
 
 function Store() {
-
+    
     const [cartCount, setCartCount] = useState(0);
     const [selectedCategory, setSelectedCategory] = useState("ALL");
     const [favorites, setFavorites] = useState([]);
 
-        const [products, setProducts] = useState([]);
-
+    const [products, setProducts] = useState([]);
+     useEffect(() => {
+    fetch("http://localhost:5000/api/products")
+        .then((response) => response.json())
+        .then((data) => {
+            setProducts(data);
+        })
+        .catch((error) => {
+            console.error("Error fetching products:", error);
+        });
+}, []);
     const [loading, setLoading] = useState(true);
 
     const [error, setError] = useState("");
